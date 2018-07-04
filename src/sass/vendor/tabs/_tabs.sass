@@ -1,42 +1,58 @@
 +b('tabs')
-  +e('list')
-    $self: &
+	+e('list')
+		$self: &
 
-    font-size: 0
-    text-align: center
-    margin-bottom: 30px
+		font-size: 0
+		text-align: center
+		margin-bottom: 30px
 
-    &-item
-      display: inline-block
+		&-item
+			display: inline-block
 
-      &-link
-        position: relative
-        display: block
-        padding: 10px 15px
-        background-color: transparent
-        text-decoration: none
-        color: inherit
-        font-size: 18px
-        border-bottom: 2px solid #eaeaea
+			&:not(:last-child)
+				margin-right: 4px
 
-        +transition
+				+min(sm)
+					margin-right: 10px
 
-        &:hover
-          background-color: #eaeaea
+				+min(md)
+					margin-right: 20px
 
-      &.active #{$self}-item-link
-        color: $color-brand-1
+				+min(lg)
+					margin-right: 30px
 
-    @at-root %effectTab
-      color: $color-brand-1
+			&-link
+				+relative()
+				display: block
+				padding: 5px 7px
+				background-color: transparent
+				border: 1px solid #d3cece
 
-      &:after
-        background-color: lighten($color-brand-1, 15%)
-        transform: none
+				text-decoration: none
+				color: #d3cece
+				font-size: 11px
 
-  +e('content')
-    &-inner
-      display: none
+				+transition()
 
-      &.active
-        display: block
+				+min(sm)
+					padding: 10px 15px
+					font-size: 18px
+
+			&-link:hover,
+			&.active #{$self}-item-link
+				color: $color-brand-1
+				border-color: $color-brand-1
+
+		@at-root %effectTab
+			color: $color-brand-1
+
+			&:after
+				background-color: lighten($color-brand-1, 15%)
+				transform: none
+
+	+e('content')
+		&-inner
+			display: none
+
+			&.active
+				display: block
