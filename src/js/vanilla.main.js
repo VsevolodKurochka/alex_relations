@@ -210,11 +210,6 @@
 		new Modal();
 		new Navigation();
 
-		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-		if(iOS){
-			document.body.style.cursor = 'pointer';
-		}
-
+		new SmoothScroll('.scrolling');
 	});
 }());
