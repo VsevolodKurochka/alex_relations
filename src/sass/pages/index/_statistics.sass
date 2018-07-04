@@ -1,0 +1,23 @@
+.statistics
+
+	&__item
+		margin-bottom: 30px
+
+		&-inner
+			+relative()
+			padding: 30px 15px
+			border: 1px solid $color-brand-1
+
+			+min(md)
+				padding: 45px 30px
+
+			&:before
+				content: ""
+				+absolute(1px, -1px)
+				+size(2px, 30px)
+				background-color: $color-white
+
+	&__footer
+		text-align: center
+		color: #bbb7ac
+		font-size: 12px

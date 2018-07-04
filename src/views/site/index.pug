@@ -2,7 +2,6 @@ extends /layouts/base
 
 block blocks
 	include /blocks/nav/navBase
-	include /blocks/footer/footerBase
 
 block variables
 	- var title = 'Я такая одна: Удобная или Уникальная?';
@@ -18,4 +17,6 @@ block content
 	include /pages/index/invite
 	include /pages/index/video
 	include /pages/index/programm
-	+footerBase()
+	include /pages/index/attention
+	include /pages/index/statistics
+	include /pages/index/warning
