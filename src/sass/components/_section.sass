@@ -1,3 +1,36 @@
-+b("section")
-  +relative()
-  +margin-y(50px)
+$section-title: ('default': 25px, 'sm': 28px, 'md': 30px, 'lg': 35px)
+$section-subtitle: ('default': 20px, 'sm': 22px, 'md': 23px, 'lg': 25px)
+
+.section
+	+relative()
+	+margin-y(30px)
+
+	+min(sm)
+		+margin-y(45px)
+
+	+min(md)
+		+margin-y(60px)
+
+	&__header
+		text-align: center
+		margin-bottom: 30px
+
+		+min(sm)
+			margin-bottom: 45px
+
+		+min(md)
+			margin-bottom: 60px
+
+	@at-root
+		%title
+			line-height: 1.2
+			font-weight: normal
+
+	&__title
+		@extend %title
+
+		+fs-simple($section-title)
+
+	&__subtitle
+		@extend %title
+		+fs-simple($section-subtitle)

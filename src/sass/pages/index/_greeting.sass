@@ -7,8 +7,11 @@
 
 	overflow: hidden
 
+	+min(sm)
+		padding-bottom: 120px
+
 	+min(md)
-		+padding-y(80px, 0)
+		+padding-y(80px, 140px)
 
 	&__bg
 
@@ -107,44 +110,3 @@
 					font-size: 24px
 					color: $color-white
 					line-height: 1
-
-	&__form
-		+padding-y(30px)
-		border-radius: 5px
-		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.42)
-		background-color: $color-white
-
-		+min(md)
-			+padding-y(45px)
-
-		&-title
-			text-align: center
-			line-height: 1.2
-			margin-bottom: 15px
-			color: $color-black
-			+min(sm)
-				font-size: 20px
-
-			+min(md)
-				margin-bottom: 30px
-				font-size: 22px
-
-			+min(lg)
-				font-size: 24px
-
-		&-outer
-			
-			+min(sm)
-				+padding-x(30px)
-
-			+min(md)
-				+padding-x(60px)
-
-			+min(lg)
-				+padding-x(100px)
-				margin-bottom: -90px
-
-		.form
-			+min(md)
-				+margin-x(auto)
-				max-width: 80%
