@@ -7,11 +7,13 @@
 		&:after
 			+pseudo
 
-	+m('cancel')
+	&_line
 		li
-			padding-left: 30px
+			padding-left: 45px
+			margin-bottom: 5px
 
 			&:after
-				top: 0
+				top: 10px
 				left: 0
-				+size(37px)
+				+size(30px, 1px)
+				background-color: $color-brand-1

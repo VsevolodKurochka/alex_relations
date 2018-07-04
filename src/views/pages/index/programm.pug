@@ -1,0 +1,30 @@
++b.SECTION.programm.section
+	.container
+		.section__header
+			h3.section__title Программа серии мастер-классов
+		+b.tabs
+			+e.UL.list
+				+e.LI.list-item.active
+					+e.A.list-item-link(data-action="tab" data-target="#day-1") День 1
+				+e.LI.list-item
+					+e.A.list-item-link(data-action="tab" data-target="#day-2") День 2
+				+e.LI.list-item
+					+e.A.list-item-link(data-action="tab" data-target="#day-3") День 3
+				+e.LI.list-item
+					+e.A.list-item-link(data-action="tab" data-target="#day-2") День 4
+				+e.LI.list-item
+					+e.A.list-item-link(data-action="tab" data-target="#day-3") День 5
+			+e.content
+				+e.content-inner.active(id="day-1")
+					+b.programm-item.row
+						.col-12.col-sm-6.col-md-5
+							+e.IMG.image(src="img/day-1.jpg")
+						.col-12.col-sm-6.col-md-7
+							+e.P.title «Сожительство - что мешает создать семью»?
+							+e.UL.list.list._line
+								li Почему женщины соглашаются на сожительство?
+								li Пробный брак и его последствия для женщины
+								li Признаки бесперспективности сожительства
+								li Жена или "временно исполняющая обязанности"?
+								li Как из сожительства перевести отношения в официальный брак?
+								li Почему мужчина не женится, но живет с Вами?
