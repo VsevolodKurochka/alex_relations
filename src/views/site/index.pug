@@ -5,12 +5,14 @@ block blocks
 	include /blocks/footer/footerBase
 
 block variables
-	- var title = 'Gulp Pro Starter Template';
-	- var description = 'Gulp Pro Starter Template - Description';
+	- var title = 'Я такая одна: Удобная или Уникальная?';
+	- var description = 'Я такая одна: Удобная или Уникальная?';
 	- var url = '';
 	- var image = 'img/logo.png';
 
 block nav
 	+navBase()
+
 block content
+	include /pages/index/greeting
 	+footerBase()
