@@ -9,3 +9,31 @@
 		+min(md)
 			display: flex
 			justify-content: flex-end
+			font-size: 16px
+
+			&-date
+				padding-right: 30px
+				border-right: 1px solid $color-white
+				margin-right: 30px
+
+				span
+					display: inline-block
+					+relative()
+					&:not(:last-child)
+
+						margin-right: 5px
+
+						&:after
+							content: ""
+							+absolute(9px, 0px)
+							+size(4px)
+							background-color: #bbb7ac
+							border-radius: 100%
+
+						+min(md)
+
+							margin-right: 20px
+
+							&:after
+								top: 9px
+								right: -12px
