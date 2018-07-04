@@ -1,0 +1,26 @@
++b('modal')
+  +fixed(0, 0, 0, 0)
+  +size(100%)
+  +padding-x(15px)
+  overflow: hidden
+  z-index: z("modal")
+  backface-visibility: hidden
+  -webkit-overflow-scrolling: touch
+  outline: 0
+  background-color: rgba(46, 46, 46, 0.8)
+
+  @extend %modalTransition
+
+  @extend %showing
+
+  +m('showing')
+    @extend %showing
+
+    &_in
+      overflow-y: visible
+
+      @extend %showing_in
+
+  &-open
+    overflow-x: hidden
+    overflow-y: hidden

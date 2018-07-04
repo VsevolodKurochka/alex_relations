@@ -1,0 +1,7 @@
+include /blocks/nav/navMenuItems
+include /blocks/nav/navMenuItem
+
+mixin navMenu()
+	+e.NAV.menu(class="col-12 col-md-6")#js-navigation-menu
+		for item in navMenuItems
+			+navMenuItem(item.link, item.name)
