@@ -1,10 +1,10 @@
 +b.SECTION.greeting
 	.container
-		.row
+		+e.info.row
 			.col-12.col-sm-6
 				+e.bg
 					+e.bg-image(src="img/header-image.png")
-			.col-12.col-sm-6
+			+e.info-content.col-12.col-sm-6
 				+e.H1.title
 					+e.SPAN.title-small Я такая одна:
 					br
@@ -14,5 +14,49 @@
 						br
 						span.color-brand-1 Уникальная?
 				+e.H2.subtitle Серия из 5 
-					span.color-brand-1 бесплатных 
+					span.color-brand-1.b бесплатных 
 					| мастер-классов
+		+e.questions.row
+			+e.questions-item.col-12.col-sm-4
+				+e.questions-item-inner
+					p Как 
+						span.b спасти отношения, 
+						br
+						| у которых, казалось бы,
+						br
+						| уже нет шансов?...
+			+e.questions-item.col-12.col-sm-4
+				+e.questions-item-inner
+					p Как 
+						span.b привлечь достойного 
+							br
+							| мужчину 
+						| и построить счастливые, 
+						br
+						| гармоничные отношения?...
+
+			+e.questions-item.col-12.col-sm-4
+				+e.questions-item-inner
+					p Как сделать всё это 
+						span.b без драм, 
+						br
+						span.b манипуляций 
+						| и битья посуды, 
+						br
+						span.b сохранить нервы 
+						| и остаться при 
+						br
+						| этом 
+						span.b настоящей женщиной?...
+		+e.form-outer
+			+e.form
+				+e.P.form-title Научитесь строить 
+					span.b отношения, которые с годами только крепнут,
+					br
+					| а не приводят к скандалам и разводу
+				+b.FORM.form._line
+					+e.content
+						+e.row
+							+e.INPUT.control(name="email" type="email" placeholder="Ваш email")
+						+e.row
+							+e.BUTTON.submit.btn._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно
