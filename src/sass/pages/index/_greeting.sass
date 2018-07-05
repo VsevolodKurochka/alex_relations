@@ -8,10 +8,13 @@
 	overflow: hidden
 
 	+min(sm)
-		+padding-y(45px, 120px)
+		+padding-y(45px, 180px)
 
 	+min(md)
 		+padding-y(80px, 140px)
+
+	+min(xlg)
+		+padding-y(140px, 200px)
 
 	&__bg
 
@@ -25,21 +28,37 @@
 			+size(100%)
 			background-image: linear-gradient( 90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100% )
 
+		+min(sm)
+			left: 30px
+			top: -145px
+
 		+min(lg)
 			opacity: 1
 			left: -90px
 			top: -260px
 
+		+min(xlg)
+			left: -120px
+
 		&-image
-			+min(md)
+			+min(sm)
 				max-width: none
+				max-height: 470px
+
+			+min(md)
 				max-height: 850px
+
+			+min(xlg)
+				max-height: 900px
 
 	&__info
 		margin-bottom: 30px
 
 		+min(md)
 			margin-bottom: 45px
+
+		+min(xlg)
+			margin-bottom: 60px
 
 		&-content
 			+relative()
@@ -68,6 +87,9 @@
 		+min(lg)
 			font-size: 50px
 
+		+min(xlg)
+			font-size: 70px
+
 	&__subtitle
 		+relative()
 		line-height: 1.2
@@ -85,6 +107,9 @@
 		+min(lg)
 			font-size: 20px
 
+		+min(xlg)
+			font-size: 26px
+
 	&__questions
 
 		&-item
@@ -96,9 +121,13 @@
 			&-inner
 				+relative()
 				padding-left: 45px
+				font-size: 14px
 
-				+max(sm)
-					font-size: 14px
+				+min(sm)
+					font-size: 12px
+
+				+min(xlg)
+					font-size: 20px
 
 				&:before
 					content: ""
