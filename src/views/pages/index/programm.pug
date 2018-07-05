@@ -87,7 +87,7 @@
 				for item in programms
 					+e.content-inner(class=item.status id=item.id)
 						+b.programm-item.row
-							.col-12.col-sm-6.col-md-5
+							+e.column._image.col-12.col-sm-6.col-md-5
 								+e.IMG.image(src=item.image)
 							.col-12.col-sm-6.col-md-7
 								+e.P.title=item.title

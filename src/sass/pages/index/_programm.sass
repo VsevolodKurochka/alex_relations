@@ -1,11 +1,20 @@
 .programm
 
 	margin-bottom: 0
-	padding-bottom: 60px
+	padding-bottom: 30px
 
 	+bg('../img/bg-programm.jpg', 0 50%)
 
+	+min(sm)
+		padding-bottom: 60px
+
 	&-item
+
+		+max(sm)
+
+			&__column
+				&_image
+					margin-bottom: 15px
 
 		+min(sm)
 			align-items: center
@@ -27,6 +36,10 @@
 				font-size: 24px
 
 		&__list
+			font-size: 16px
+
+			+min(sm)
+				font-size: 19px
 
 			+min(md)
 				font-size: 20px

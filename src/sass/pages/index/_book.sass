@@ -1,15 +1,17 @@
 .book
 	+relative()
-	+padding-y(45px)
+	
 	font-size: 0
 	z-index: 1
-
-	&:before
-		content: ""
-		+absolute(0, null, null, 0)
-		+size(20%, 100%)
-		background-color: $color-brand-2
-		z-index: -1
+	
+	+min(sm)
+		+padding-y(45px)
+		&:before
+			content: ""
+			+absolute(0, null, null, 0)
+			+size(20%, 100%)
+			background-color: $color-brand-2
+			z-index: -1
 
 	&__row
 
