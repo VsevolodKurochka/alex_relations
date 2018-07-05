@@ -1,10 +1,14 @@
 +b('tabs')
 	+e('list')
 		$self: &
-
+		
+		display: none
 		font-size: 0
 		text-align: center
 		margin-bottom: 30px
+
+		+min(sm)
+			display: block
 
 		&-item
 			display: inline-block
@@ -36,8 +40,8 @@
 
 				&:before
 					content: ""
-					+absolute(1px, -1px)
-					+size(2px, 15px)
+					+absolute(1px, -3px)
+					+size(6px, 15px)
 					background-color: $color-white
 
 				+min(sm)
@@ -58,7 +62,8 @@
 
 	+e('content')
 		&-inner
-			display: none
+			+min(sm)
+				display: none
 
-			&.active
-				display: block
+				&.active
+					display: block

@@ -44,5 +44,48 @@
 			+min(md)
 				font-size: 20px
 
+	&__tabs-content
+		+max(sm)
+			padding-top: 70px
+
+	.owl
+		&-nav
+			+absolute(0, null, null, 0)
+			width: 100%
+			
+			.owl-prev,
+			.owl-next
+				+absolute(0)
+				+size(50px)
+				border-radius: 100%
+				border: none
+				background-color: $color-brand-1
+
+				font-size: 20px
+				color: $color-white
+
+			.owl-prev
+				left: 0
+
+			.owl-next
+				right: 0
+
+		&-dots
+			margin-top: 30px
+			text-align: center
+
+		&-dot
+			display: inline-block
+			+size(15px)
+			border-radius: 100%
+			background-color: $color-brand-2
+			+transition()
+
+			&:not(:last-child)
+				margin-right: 10px
+
+			&.active
+				background-color: $color-brand-1
+
 	+ .attention
 		margin-top: 0

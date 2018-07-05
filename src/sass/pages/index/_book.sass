@@ -9,7 +9,7 @@
 		&:before
 			content: ""
 			+absolute(0, null, null, 0)
-			+size(20%, 100%)
+			+size(30%, 100%)
 			background-color: $color-brand-2
 			z-index: -1
 
@@ -21,6 +21,10 @@
 	&__content
 		text-align: center
 		margin-bottom: 30px
+
+	&__image
+		+max(sm)
+			margin-bottom: 15px
 
 	&__subtitle
 		+relative()
