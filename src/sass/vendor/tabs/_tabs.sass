@@ -34,6 +34,12 @@
 
 				+transition()
 
+				&:before
+					content: ""
+					+absolute(1px, -1px)
+					+size(2px, 15px)
+					background-color: $color-white
+
 				+min(sm)
 					padding: 10px 15px
 					font-size: 18px
