@@ -1,6 +1,6 @@
 .greeting
 	+relative()
-	+padding-y(45px)
+	+padding-y(30px, 120px)
 	background-color: #0a0b0d
 	color: $color-white
 	z-index: 1
@@ -8,24 +8,25 @@
 	overflow: hidden
 
 	+min(sm)
-		padding-bottom: 120px
+		+padding-y(45px, 120px)
 
 	+min(md)
 		+padding-y(80px, 140px)
 
 	&__bg
 
-		+min(sm)
-			z-index: -1
-			+absolute(0, null, null, 0)
+		z-index: -1
+		+absolute(0, null, null, 0)
+		opacity: 0.5
 
-			&:before
-				content: ""
-				+absolute(0, null, null, 0)
-				+size(100%)
-				background-image: linear-gradient( 90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
+		&:before
+			content: ""
+			+absolute(0, null, null, 0)
+			+size(100%)
+			background-image: linear-gradient( 90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100% )
 
 		+min(lg)
+			opacity: 1
 			left: -90px
 			top: -260px
 
@@ -86,16 +87,18 @@
 
 	&__questions
 
-		margin-bottom: 30px
-
-		+min(md)
-			margin-bottom: 45px
-
 		&-item
+
+			+max(sm)
+				&:not(:last-child)
+					margin-bottom: 15px
 
 			&-inner
 				+relative()
 				padding-left: 45px
+
+				+max(sm)
+					font-size: 14px
 
 				&:before
 					content: ""
