@@ -1,0 +1,46 @@
+.book
+	+relative()
+	+padding-y(45px)
+	font-size: 0
+	z-index: 1
+
+	&:before
+		content: ""
+		+absolute(0, null, null, 0)
+		+size(20%, 100%)
+		background-color: $color-brand-2
+		z-index: -1
+
+	&__row
+
+		+min(sm)
+			align-items: center
+
+	&__content
+		text-align: center
+		margin-bottom: 30px
+
+	&__subtitle
+		+relative()
+		font-size: 17px
+		padding-bottom: 15px
+		margin-bottom: 15px
+
+		&:before
+			content: ""
+			+absolute(null, null, 0, 50%)
+			+size(70px, 1px)
+			margin-left: -35px
+			background-color: $color-brand-1
+
+	&__title
+
+		line-height: 1.2
+		+font('pb')
+		font-size: 20px
+		
+		+min(sm)
+			font-size: 22px
+
+		+min(md)
+			font-size: 25px

@@ -3,8 +3,22 @@
 
 	width: 100%
 
-	&_block &__row
-		margin-bottom: 15px
+	&__row
+		+relative()
+	
+	&_block
+		text-align: center
+
+	&_block &
+
+		&__row
+			margin-bottom: 15px
+
+			&_submit
+				margin-top: 30px
+
+		&__control
+			text-align: center
 
 	+max(sm)
 		&_line &__row
@@ -25,11 +39,17 @@
 			&__submit
 				+size(100%)
 
-	@if $themeFormDesign == "new"
+	
+
+	&_modern &
 		&__control
 			+input-default
 
 			border: none
+
+			+placeholder
+				color: #e3e2e0
+
 
 		&__line
 			position: absolute
@@ -42,7 +62,7 @@
 
 			+transition
 
-		input:focus + &__line
+		&__control:focus + &__line
 			width: 100%
 
 		&__row_line
@@ -53,9 +73,8 @@
 				bottom: 0
 				height: 1px
 				width: 100%
-				background-color: $color-brand-1
-				
-	@else
+				background-color: #e3e2e0
+	&_classic &
 		&__control
 			+input-default
 
@@ -64,5 +83,12 @@
 			&:focus
 				border-color: $color-brand-1
 
-				+placeholder
-					color: transparent
+	&__label
+		font-size: 14px
+		+font('pl')
+		color: #bbb7ac
+
+	&__control
+		&:focus
+			+placeholder
+				color: transparent
