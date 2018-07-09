@@ -11,16 +11,16 @@ $(document).ready(function(){
 				$(".tabs__content > div").not($(tabTarget)).fadeOut(0);
 		});
 	// Develope
-	// function initProgrammCarousel(){
-	// 	if($(window).width() < 768){
-	// 		$("#programm-content").owlCarousel({
-	// 			items: 1,
-	// 			autoHeight: true,
-	// 			nav: true,
-	// 			navText: ["←", "→"]
-	// 		});
-	// 	}
-	// }
+	function initProgrammCarousel(){
+		if($(window).width() < 768){
+			$("#programm-content").owlCarousel({
+				items: 1,
+				autoHeight: true,
+				nav: false,
+				navText: ["←", "→"]
+			});
+		}
+	}
 
-	// initProgrammCarousel();
+	initProgrammCarousel();
 });	

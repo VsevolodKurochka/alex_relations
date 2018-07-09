@@ -2,9 +2,13 @@
 	+e('list')
 		$self: &
 		
+		display: none
 		font-size: 0
 		text-align: center
 		margin-bottom: 30px
+
+		+min(sm)
+			display: block
 
 		&-item
 			display: inline-block
@@ -58,7 +62,8 @@
 
 	+e('content')
 		&-inner
-			display: none
+			+min(sm)
+				display: none
 
-			&.active
-				display: block
+				&.active
+					display: block

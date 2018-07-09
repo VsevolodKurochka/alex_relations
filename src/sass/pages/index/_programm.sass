@@ -46,46 +46,73 @@
 
 	&__tabs-content
 		+max(sm)
-			padding-top: 70px
+			padding-top: 55px
 
 	.owl
-		&-nav
-			+absolute(0, null, null, 0)
-			width: 100%
+		// &-nav
+		// 	+absolute(0, null, null, 0)
+		// 	width: 100%
 			
-			.owl-prev,
-			.owl-next
-				+absolute(0)
-				+size(50px)
-				border-radius: 100%
-				border: none
-				background-color: $color-brand-1
+		// 	.owl-prev,
+		// 	.owl-next
+		// 		+absolute(0)
+		// 		+size(50px)
+		// 		border-radius: 100%
+		// 		border: none
+		// 		background-color: $color-brand-1
 
-				font-size: 20px
-				color: $color-white
+		// 		font-size: 20px
+		// 		color: $color-white
 
-			.owl-prev
-				left: 0
+		// 	.owl-prev
+		// 		left: 0
 
-			.owl-next
-				right: 0
+		// 	.owl-next
+		// 		right: 0
 
 		&-dots
-			margin-top: 30px
+			+absolute(0, null, null, 0)
 			text-align: center
+			counter-reset: owl
 
 		&-dot
+			+relative()
 			display: inline-block
-			+size(15px)
-			border-radius: 100%
-			background-color: $color-brand-2
+			padding: 5px 7px
+			background-color: transparent
+			border: 1px solid #d3cece
+
+			text-decoration: none
+			color: #d3cece
+			font-size: 11px
+
 			+transition()
 
 			&:not(:last-child)
-				margin-right: 10px
+				margin-right: 3px
+
+			&:before
+				content: ""
+				+absolute(1px, -3px)
+				+size(6px, 15px)
+				background-color: $color-white
+			&:after
+				counter-increment: owl
+				content: "День " counter(owl)
 
 			&.active
-				background-color: $color-brand-1
+				color: $color-brand-1
+				border-color: $color-brand-1
+			// +size(15px)
+			// border-radius: 100%
+			// background-color: $color-brand-2
+			// +transition()
+
+			// &:not(:last-child)
+			// 	margin-right: 10px
+
+			// &.active
+			// 	background-color: $color-brand-1
 
 	+ .attention
 		margin-top: 0

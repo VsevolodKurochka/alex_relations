@@ -39,7 +39,7 @@
 		},
 		{
 			id: 'day-4',
-			image: 'img/day-4.jpg',
+			image: 'img/day-5.jpg',
 			title: "«Почему у тебя нет любимого мужчины»?",
 			list: [
 				"Почему мужчины не видят тебя в своем будущем",
@@ -50,7 +50,7 @@
 		},
 		{
 			id: 'day-5',
-			image: 'img/day-5.jpg',
+			image: 'img/day-4.jpg',
 			title: "«Почему ты замужем, но одинока»?",
 			list: [
 				"Причины одиночества в семье",
@@ -77,7 +77,7 @@
 					+e.A.list-item-link(data-action="tab" data-target="#day-4") День 4
 				+e.LI.list-item
 					+e.A.list-item-link(data-action="tab" data-target="#day-5") День 5
-			+e.content#programm-content
+			+e.content.programm__tabs-content.owl-carousel#programm-content
 				for item in programms
 					+e.content-inner(class=item.status id=item.id)
 						+b.programm-item.row
