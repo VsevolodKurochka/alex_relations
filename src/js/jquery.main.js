@@ -16,7 +16,7 @@ $(document).ready(function(){
 			$("#programm-content").owlCarousel({
 				items: 1,
 				autoHeight: true,
-				nav: false,
+				nav: true,
 				navText: ["←", "→"]
 			});
 		}
