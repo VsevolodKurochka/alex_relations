@@ -53,3 +53,32 @@ mixin book(options)
 									+e.INPUT.control(name="phone" type="tel" required placeholder="Ваш телефон (напомним по sms)" class="input-tel" id="phone_2")
 								+e.row
 									+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно
+
+mixin programm(programms)
+	+b.SECTION.programm.section
+		.container
+			.section__header
+				h3.section__title Программа серии мастер-классов
+			+b.tabs
+				+e.UL.list
+					+e.LI.list-item.active
+						+e.A.list-item-link(data-action="tab" data-target="#day-1") День 1
+					+e.LI.list-item
+						+e.A.list-item-link(data-action="tab" data-target="#day-2") День 2
+					+e.LI.list-item
+						+e.A.list-item-link(data-action="tab" data-target="#day-3") День 3
+					+e.LI.list-item
+						+e.A.list-item-link(data-action="tab" data-target="#day-4") День 4
+					+e.LI.list-item
+						+e.A.list-item-link(data-action="tab" data-target="#day-5") День 5
+				+e.content.programm__tabs-content.owl-carousel#programm-content
+					for item in programms
+						+e.content-inner(class=item.status id=item.id)
+							+b.programm-item.row
+								+e.column._image.col-12.col-sm-6.col-md-5
+									+e.IMG.image(src=item.image)
+								.col-12.col-sm-6.col-md-7
+									+e.P.title=item.title
+									+e.UL.list.list._line
+										for li in item.list
+											li=li
