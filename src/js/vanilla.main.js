@@ -77,5 +77,19 @@
 		new Navigation();
 
 		new SmoothScroll('.scrolling');
+
+		var phoneMask_1 = new IMask(
+	  	document.getElementById('phone_1'), {
+	    	mask: '+{7} (000) 000-00-00'
+	  	}
+	  );
+
+	  var phoneMask_2 = new IMask(
+	  	document.getElementById('phone_2'), {
+	    	mask: '+{7} (000) 000-00-00'
+	  	}
+	  );
+
 	});
+
 }());

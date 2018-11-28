@@ -1,0 +1,55 @@
+mixin invite(options)
+	+b.SECTION.invite
+		.container
+			+e.form-outer
+				+e.form
+					+e.P.form-title Научитесь строить 
+						span.b отношения, которые с годами только крепнут, 
+						br
+						| а не приводят к скандалам и разводу
+					+b.FORM.form._block._classic.landing-form(action="https://app.getresponse.com/add_subscriber.html" method="POST")
+						input(type='hidden' name='campaign_token' value=options.campaign_token)
+						input(type='hidden' name='thankyou_url' value=options.thankyou_url)
+						input(type='hidden' name='custom_mobile_phone' value="")
+						+e.content
+							.row
+								.col-12.col-sm-6
+									+e.row
+										+e.INPUT.control(name="first_name" type="text" required placeholder="Ваше имя")
+									+e.row
+										+e.INPUT.control(name="email" type="email" required placeholder="Ваш email (пришлём ссылку на участие)")
+									+e.row
+										+e.INPUT.control(name="phone" type="tel" required placeholder="Ваш телефон (напомним по sms)" class="input-tel" id="phone_1")
+								.col-12.col-sm-6
+									+e.row
+										+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно
+
+mixin book(options)
+	+b.SECTION.book
+		.container
+			+e.row.row
+				+e.image.col-12.col-sm-6.col-md-5
+					img(src="img/book.jpg")
+				.col-12.col-sm-6.col-md-7.col-lg-6
+					+e.content
+						+e.P.subtitle Зарегистрируйтесь прямо сейчас и
+							br
+							| я отправлю Вам свою мини-книгу
+						+e.P.title "Как узнать достойного мужчину:
+							br
+							| 5 признаков"  
+							span.color-brand-1 в подарок!
+					+e.form-wrapper
+						+b.FORM.form._block._classic.landing-form(action="https://app.getresponse.com/add_subscriber.html" method="POST")
+							input(type='hidden' name='campaign_token' value=options.campaign_token)
+							input(type='hidden' name='thankyou_url' value=options.thankyou_url)
+							input(type='hidden' name='custom_mobile_phone' value="")
+							+e.content
+								+e.row
+									+e.INPUT.control(name="first_name" type="text" required placeholder="Ваше имя")
+								+e.row
+									+e.INPUT.control(name="email" type="email" required placeholder="Ваш email (пришлём ссылку на участие)")
+								+e.row
+									+e.INPUT.control(name="phone" type="tel" required placeholder="Ваш телефон (напомним по sms)" class="input-tel" id="phone_2")
+								+e.row
+									+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно

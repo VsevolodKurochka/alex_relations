@@ -8,16 +8,18 @@ block variables
 	- var description = 'Как спасти отношения, у которых, казалось бы, уже нет шансов?...';
 	- var url = '';
 	- var image = 'img/header-image.png';
+	- var campaign_token = 'nm0pI';
+	- var thankyou_url = 'http://promo.markbarton.ru/page3/thx.html';
 
 block nav
 	+navBase()
 
 block content
 	include /pages/index/greeting
-	include /pages/index/invite
+	include /pages/3/invite
 	include /pages/index/video
 	include /pages/index/programm
 	include /pages/index/attention
 	include /pages/index/statistics
 	include /pages/index/warning
-	include /pages/index/book
+	include /pages/3/book
