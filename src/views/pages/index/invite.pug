@@ -6,10 +6,21 @@
 					span.b отношения, которые с годами только крепнут, 
 					br
 					| а не приводят к скандалам и разводу
-				+b.FORM.form._line._classic(action="unisender.php" method="POST")
+				+b.FORM.form._block._classic(action="https://app.getresponse.com/add_subscriber.html" method="POST")
+					input(type='hidden' name='campaign_token' value='nm0pI')
+					input(type='hidden' name='thankyou_url' value='http://promo.markbarton.ru/page3/thx.html')
+					input(type='hidden' name='start_day' value='0')
+					input(type='hidden' name='forward_data' value='')
 					input(type="hidden" name="redirect" value="thx.html")
 					+e.content
-						+e.row
-							+e.INPUT.control(name="Email" type="email" required placeholder="Введите ваш email")
-						+e.row
-							+e.BUTTON.submit.btn._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно
+						.row
+							.col-12.col-sm-6
+								+e.row
+									+e.INPUT.control(name="first_name" type="text" required placeholder="Ваше имя")
+								+e.row
+									+e.INPUT.control(name="email" type="email" required placeholder="Ваш email (пришлём ссылку на участие)")
+								+e.row
+									+e.INPUT.control(name="phone" type="tel" required placeholder="Ваш телефон (напомним по sms)")
+							.col-12.col-sm-6
+								+e.row
+									+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Зарегистрироваться бесплатно
